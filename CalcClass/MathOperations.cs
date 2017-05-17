@@ -101,7 +101,17 @@ result = 0;
         public static int ABS(long a)
         {
             int result;
-            // тут 5.
+            try 
+{ 
+if (a > 0) return (int)(a); 
+else return (int)(-a); 
+} 
+catch (OverflowException) 
+{ 
+_lastError = "Error 06"; 
+result = 0; 
+} 
+return result;
         }
         public static int IABS(long a)
         {
