@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Collections;
@@ -125,7 +125,7 @@ namespace AnalyzerClass
                                     Expression = string.Format("Error 01 at <{0}>", ErrPosition);
                                     return false;
                                 }
-                               // тут 10.                         
+                               // ��� 10.                         
                                 
                                 continue;
                             }
@@ -163,7 +163,7 @@ namespace AnalyzerClass
                             continue;
                         default:
                             {
-                                // тут 12
+                                // ��� 12
                             }
                     }
                 }
@@ -266,7 +266,7 @@ namespace AnalyzerClass
                                 {
                                     ShowMessage = true;
                                     Expression = MathOperations.lastError;
-                                    // тут 9
+                                    MathOperations.lastError = "";
                                     return Expression;
                                 }
                                 break;
@@ -279,7 +279,7 @@ namespace AnalyzerClass
                                 {
                                     ShowMessage = true;
                                     Expression = MathOperations.lastError;
-                                    //тут 9
+                                    MathOperations.lastError = "";
                                     return Expression;
                                 }
                                 break;
