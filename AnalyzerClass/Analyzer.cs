@@ -132,6 +132,7 @@ namespace AnalyzerClass
                                      Expression = string.Format("Error 10 at <{0}>", ErrPosition);
                                      return false;
                                 } 
+                               // тут 10.                       
                                 
                                 continue;
                             }
@@ -169,6 +170,7 @@ namespace AnalyzerClass
                             continue;
                         default:
                             {
+
                                 ShowMessage = true;
                                 ErrPosition = i + 1;
                                 Expression = string.Format("Error 02 at <{0}>", ErrPosition);
@@ -275,7 +277,9 @@ namespace AnalyzerClass
                                 {
                                     ShowMessage = true;
                                     Expression = MathOperations.lastError;
-                                    // тут 9
+
+                                    MathOperations.lastError = "";
+
                                     return Expression;
                                 }
                                 break;
@@ -288,7 +292,8 @@ namespace AnalyzerClass
                                 {
                                     ShowMessage = true;
                                     Expression = MathOperations.lastError;
-                                    //тут 9
+                                    MathOperations.lastError = "";
+
                                     return Expression;
                                 }
                                 break;
