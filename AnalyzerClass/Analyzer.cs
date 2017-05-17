@@ -1,4 +1,4 @@
-Ôªøusing System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Collections;
@@ -125,7 +125,13 @@ namespace AnalyzerClass
                                     Expression = string.Format("Error 01 at <{0}>", ErrPosition);
                                     return false;
                                 }
-                               // —Ç—É—Ç 10.                         
+                               if ("(".Contains(Expression[i-1]) && ")".Contains(Expression[i]))
+                                {
+                                     ShowMessage = true;
+                                     ErrPosition = i + 1;
+                                     Expression = string.Format("Error 10 at <{0}>", ErrPosition);
+                                     return false;
+                                } 
                                 
                                 continue;
                             }
@@ -163,7 +169,7 @@ namespace AnalyzerClass
                             continue;
                         default:
                             {
-                                // —Ç—É—Ç 12
+                                // ÚÛÚ 12
                             }
                     }
                 }
@@ -266,7 +272,7 @@ namespace AnalyzerClass
                                 {
                                     ShowMessage = true;
                                     Expression = MathOperations.lastError;
-                                    // —Ç—É—Ç 9
+                                    // ÚÛÚ 9
                                     return Expression;
                                 }
                                 break;
@@ -279,7 +285,7 @@ namespace AnalyzerClass
                                 {
                                     ShowMessage = true;
                                     Expression = MathOperations.lastError;
-                                    //—Ç—É—Ç 9
+                                    //ÚÛÚ 9
                                     return Expression;
                                 }
                                 break;
