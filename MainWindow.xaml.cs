@@ -1,4 +1,4 @@
-п»їusing System;
+using System;
 using System.Diagnostics;
 using System.Linq;
 using System.Windows;
@@ -109,10 +109,18 @@ namespace Calculator
                         Memory = 0;
                         break;
                     case "MR":
-                        // С‚СѓС‚ 7
+                        // тут 7
                         break;
                     case "M+":
-                       // С‚СѓС‚ 6
+                       try 
+{ 
+Memory = int.Parse(textBoxResult.Text); 
+
+} 
+catch 
+{ 
+textBoxResult.Text = "Неможливо перетворити до числа"; 
+} 
                         break;
                     case "+/-":                       
                         if (!_timer.IsRunning)
