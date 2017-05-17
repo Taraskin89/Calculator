@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 using System.Linq;
 using System.Windows;
@@ -109,10 +109,10 @@ namespace Calculator
                         Memory = 0;
                         break;
                     case "MR":
-                        // тут 7
+                        textBoxExpression.Text += Memory.ToString();
                         break;
                     case "M+":
-                       // тут 6
+                       // ��� 6
                         break;
                     case "+/-":                       
                         if (!_timer.IsRunning)
