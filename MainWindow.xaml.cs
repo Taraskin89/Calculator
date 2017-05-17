@@ -109,18 +109,20 @@ namespace Calculator
                         Memory = 0;
                         break;
                     case "MR":
-                        // тут 7
-                        break;
-                    case "M+":
-                       try 
-{ 
-Memory = int.Parse(textBoxResult.Text); 
 
-} 
-catch 
-{ 
-textBoxResult.Text = "Неможливо перетворити до числа"; 
-} 
+                        textBoxExpression.Text += Memory.ToString();
+                        break;
+                        case "M+":
+                        try
+                        {
+                            Memory = int.Parse(textBoxResult.Text);
+
+                        }
+                        catch
+                        {
+                            textBoxResult.Text = "Неможливо перетворити до числа";
+                        }
+
                         break;
                     case "+/-":                       
                         if (!_timer.IsRunning)
