@@ -169,7 +169,10 @@ namespace AnalyzerClass
                             continue;
                         default:
                             {
-                                // тут 12
+                                ShowMessage = true;
+                                ErrPosition = i + 1;
+                                Expression = string.Format("Error 02 at <{0}>", ErrPosition);
+                                return false;
                             }
                     }
                 }
